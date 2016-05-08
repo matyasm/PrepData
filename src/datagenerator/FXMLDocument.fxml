@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="datagenerator.FXMLDocumentController">
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="121.99999918213143" layoutX="126.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="460.0" />
+    <Label fx:id="affiliateLabel" layoutX="5.0" layoutY="1.0" minHeight="16.0" minWidth="69.0" text="Affiliate:" />
+    <Label fx:id="datarootLabel" layoutX="131.0" layoutY="25.0" minHeight="16.0" minWidth="69.0" text="Data root:" />
+    <ChoiceBox id="selectaffiliate" layoutX="5.0" layoutY="20.0" value="FTI">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="FTI" />
+          <String fx:value="BigXtra" />
+          <String fx:value="BigXtraCH" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Button id="generatedata" fx:id="button" layoutX="5.0" layoutY="49.0" onAction="#handleButtonAction" text="Generate data" />
+    <Label fx:id="label" layoutX="13.0" layoutY="99.0" minHeight="16.0" minWidth="69.0" text="...." />
+    <Label fx:id="referenzLabel" layoutX="132.0" layoutY="78.0" minHeight="16.0" minWidth="69.0" text="Referenz:" />
+    <Label fx:id="timestampLabel" layoutX="131.0" layoutY="102.0" minHeight="16.0" minWidth="69.0" text="Timestamp:" />
+    <TextField fx:id="dataroot" layoutX="210.0" layoutY="22.0" prefWidth="362.0" />
+    <TextField fx:id="referenz" layoutX="210.0" layoutY="75.0" prefWidth="362.0" promptText="TomaNr/VorgangsNr" />
+    <TextField fx:id="timestamp" layoutX="210.0" layoutY="101.0" prefWidth="362.0" promptText="YYYYMMDD" />
+    <Label fx:id="targetdirLabel" layoutX="131.0" layoutY="52.0" minHeight="16.0" minWidth="69.0" text="Target dir:" />
+    <TextField fx:id="targetdir" layoutX="210.0" layoutY="49.0" prefWidth="362.0" promptText="Target directory" />
+    <Label layoutX="8.0" layoutY="124.0" text="Log:" />
+    <TextArea fx:id="logarea" layoutX="5.0" layoutY="143.0" prefHeight="395.0" prefWidth="581.0" wrapText="true" />
+  </children>
+</AnchorPane>
