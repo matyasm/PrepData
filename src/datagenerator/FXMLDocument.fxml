@@ -26,11 +26,11 @@
     <Label fx:id="label" layoutX="13.0" layoutY="99.0" minHeight="16.0" minWidth="69.0" text="...." />
     <Label fx:id="referenzLabel" layoutX="132.0" layoutY="78.0" minHeight="16.0" minWidth="69.0" text="Referenz:" />
     <Label fx:id="timestampLabel" layoutX="131.0" layoutY="102.0" minHeight="16.0" minWidth="69.0" text="Timestamp:" />
-    <TextField fx:id="dataroot" layoutX="210.0" layoutY="22.0" prefWidth="362.0" />
+    <TextField fx:id="dataRoot" layoutX="210.0" layoutY="22.0" prefWidth="362.0" />
     <TextField fx:id="referenz" layoutX="210.0" layoutY="75.0" prefWidth="362.0" promptText="TomaNr/VorgangsNr" />
     <TextField fx:id="timestamp" layoutX="210.0" layoutY="101.0" prefWidth="362.0" promptText="YYYYMMDD" />
     <Label fx:id="targetdirLabel" layoutX="131.0" layoutY="52.0" minHeight="16.0" minWidth="69.0" text="Target dir:" />
-    <TextField fx:id="targetdir" layoutX="210.0" layoutY="49.0" prefWidth="362.0" promptText="Target directory" />
+    <TextField fx:id="targetDir" layoutX="210.0" layoutY="49.0" prefWidth="362.0" promptText="Target directory" />
     <Label layoutX="8.0" layoutY="124.0" text="Log:" />
     <TextArea fx:id="logarea" layoutX="5.0" layoutY="143.0" prefHeight="395.0" prefWidth="581.0" wrapText="true" />
   </children>

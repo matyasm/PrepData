@@ -1,6 +1,8 @@
 package datagenerator;
 
-import java.io.File;
+import java.io.*;
+import java.util.Properties;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,11 +24,10 @@ public class DataGenerator extends Application {
         
         stage.setScene(scene);
         stage.show();
-        
-        //load parameters from file
-        File inFile = new File("settings.properties");
-        
+
+
     }
+
 
     /**
      * @param args the command line arguments
