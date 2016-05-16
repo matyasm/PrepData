@@ -5,9 +5,7 @@
  */
 package datagenerator;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.Properties;
 import java.util.ResourceBundle;
@@ -28,7 +26,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Label label;
     @FXML
-    private TextField dataRoot, targetDir;
+    private TextField dataRoot, targetDir, timeStamp, referenz;
     //private Label timestampLabel;
     
     @FXML
@@ -38,7 +36,7 @@ public class FXMLDocumentController implements Initializable {
         //timestampLabel.setText("logContent");
  
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -66,9 +64,14 @@ public class FXMLDocumentController implements Initializable {
         System.out.println(prop.toString());
         dataRoot.setText(prop.getProperty("dataRoot"));
         targetDir.setText(prop.getProperty("targetDir"));
-
+        timeStamp.setText(prop.getProperty("timeStamp"));
+        referenz.setText(prop.getProperty("referenz"));
     }
 
 
+    public void saveData(Properties prop) throws FileNotFoundException {
+        prop.setProperty("dataRoot", dataRoot.getText());
+        saveData(prop);
+    }
     
 }
