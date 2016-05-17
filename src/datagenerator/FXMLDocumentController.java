@@ -69,9 +69,13 @@ public class FXMLDocumentController implements Initializable {
     }
 
 
-    public void saveData(Properties prop) throws FileNotFoundException {
-        prop.setProperty("dataRoot", dataRoot.getText());
-        saveData(prop);
+    public static void saveData(String pFileName) throws IOException {
+        Properties prop = new Properties();
+
+        prop.setProperty("dataRoot", "abcd");
+        OutputStream out = new FileOutputStream(new File(pFileName));
+        prop.store(out, "");
     }
     
 }
+
