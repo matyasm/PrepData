@@ -28,7 +28,6 @@ public class DataGenerator extends Application {
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {
-                System.out.println("Stage is closing");
                 try {
                     FXMLDocumentController.saveData("settings.properties");
                 } catch (IOException e) {

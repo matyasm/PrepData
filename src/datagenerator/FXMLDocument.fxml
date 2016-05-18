@@ -15,7 +15,7 @@
     <Label fx:id="datarootLabel" layoutX="131.0" layoutY="25.0" minHeight="16.0" minWidth="69.0" text="Data root:" />
     <ChoiceBox id="selectaffiliate" layoutX="5.0" layoutY="20.0" value="FTI">
       <items>
-        <FXCollections fx:factory="observableArrayList">
+        <FXCollections fx:factory="observableArrayList" fx:id="affiliateSelection">
           <String fx:value="FTI" />
           <String fx:value="BigXtra" />
           <String fx:value="BigXtraCH" />
@@ -23,15 +23,14 @@
       </items>
     </ChoiceBox>
     <Button id="generatedata" fx:id="button" layoutX="5.0" layoutY="49.0" onAction="#handleButtonAction" text="Generate data" />
-    <Label fx:id="label" layoutX="13.0" layoutY="99.0" minHeight="16.0" minWidth="69.0" text="...." />
     <Label fx:id="referenzLabel" layoutX="132.0" layoutY="78.0" minHeight="16.0" minWidth="69.0" text="Referenz:" />
     <Label fx:id="timestampLabel" layoutX="131.0" layoutY="102.0" minHeight="16.0" minWidth="69.0" text="Timestamp:" />
-    <TextField fx:id="dataRoot" layoutX="210.0" layoutY="22.0" prefWidth="362.0" />
-    <TextField fx:id="referenz" layoutX="210.0" layoutY="75.0" prefWidth="362.0" promptText="TomaNr/VorgangsNr" />
+    <TextField fx:id="dataRoot" layoutX="210.0" layoutY="22.0" prefWidth="362.0" onKeyReleased="#updateData"/>
+    <TextField fx:id="targetDir" layoutX="210.0" layoutY="49.0" prefWidth="362.0" promptText="Target directory" onKeyReleased="#updateData"/>
+    <TextField fx:id="referenz" layoutX="210.0" layoutY="75.0" prefWidth="362.0" promptText="TomaNr/VorgangsNr"   />
     <TextField fx:id="timeStamp" layoutX="210.0" layoutY="101.0" prefWidth="362.0" promptText="YYYYMMDD" />
     <Label fx:id="targetdirLabel" layoutX="131.0" layoutY="52.0" minHeight="16.0" minWidth="69.0" text="Target dir:" />
-    <TextField fx:id="targetDir" layoutX="210.0" layoutY="49.0" prefWidth="362.0" promptText="Target directory" />
     <Label layoutX="8.0" layoutY="124.0" text="Log:" />
-    <TextArea fx:id="logarea" layoutX="5.0" layoutY="143.0" prefHeight="395.0" prefWidth="581.0" wrapText="true" />
+    <TextArea fx:id="logArea" layoutX="5.0" layoutY="143.0" prefHeight="395.0" prefWidth="581.0" wrapText="true" />
   </children>
 </AnchorPane>
